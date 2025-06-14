@@ -22,6 +22,6 @@ The reasons for these frameworks is that they are extremely well documented, hav
 
 ## Github and Blogs
 All of this will be documented through  
-[Github](https://github.com/tmastercoding/fullstack) on a public repo and on seperate blog posts all tagged with the code FullStack.
+[Github](https://github.com/tmastercoding/fullstack) on a public repo and on seperate blog posts all tagged with the code  [fullstack](https://tmastercoding.blogspot.com/search/label/fullstack).
 
 Thanks!

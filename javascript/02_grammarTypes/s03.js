@@ -7,3 +7,6 @@ var z = "37" + 7;
 console.log(x);
 console.log(y);
 console.log(z);
+
+console.log("37"-7)
+console.log("37"*7)

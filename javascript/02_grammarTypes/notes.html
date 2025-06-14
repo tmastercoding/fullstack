@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>blog.md</title>
+<title>notes.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <style>
@@ -365,22 +365,170 @@ code {
           : 'default'
     });
   </script>
-<h1 id="full-stack-dev">Full Stack Dev</h1>
-<p>Here, on this blog, I plan to document my journey of learning full stack dev so that I can build applications for future projects.</p>
-<p>I have a basic understanding of HTML and CSS, with a lot of experience with C++, C and Python.</p>
-<h2 id="resources-ill-use">Resources I'll use</h2>
-<p>I will be first learning JavaScript with MDN docs.</p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN Web Docs</a></p>
-<p>Started Jun 7th 2025</p>
-<p>Then, I will learn React.js (frontend) through this Scrimba course (free for most):</p>
-<p><a href="https://scrimba.com/learn-react-c0e">Scrimba React Course</a></p>
-<p>Then I will go on to learn Node.js and Express.Js (backend).</p>
-<h2 id="reasons-for-frameworks">Reasons for frameworks</h2>
-<p>The reasons for these frameworks is that they are extremely well documented, have tons of online free tutorials and guides and share the same language of JavaScript. If I develop a strong foundation of JavaScript learning these frameworks should be much easier.</p>
-<h2 id="github-and-blogs">Github and Blogs</h2>
-<p>All of this will be documented through<br>
-<a href="https://github.com/tmastercoding/fullstack">Github</a> on a public repo and on seperate blog posts all tagged with the code  <a href="https://tmastercoding.blogspot.com/search/label/fullstack">fullstack</a>.</p>
-<p>Thanks!</p>
+<h1 id="grammar-and-types---javascript">Grammar and Types - JavaScript</h1>
+<h2 id="intro">intro:</h2>
+<ul>
+<li>source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types">MDN Web Docs - Grammar and Types</a></li>
+<li>github: <a href="https://github.com/tmastercoding/fullstack">Github</a></li>
+<li>from the full stack dev series</li>
+</ul>
+<h2 id="variable-names">variable names:</h2>
+<ul>
+<li>case-sensitive</li>
+<li>unicode (can use ü)</li>
+</ul>
+<h2 id="instructions">instructions:</h2>
+<ul>
+<li>statements</li>
+<li>seperated by ;</li>
+<li>not necessary if seperated by lines but recommended</li>
+</ul>
+<h2 id="comments">comments:</h2>
+<ul>
+<li>// for one line</li>
+<li>/* */ for multi line</li>
+<li>cannot be nested</li>
+</ul>
+<h2 id="declarations">declarations:</h2>
+<ul>
+<li>var
+<ul>
+<li>decalres variable, option for init to value</li>
+</ul>
+</li>
+<li>let
+<ul>
+<li>declares block-scoped local variable, option for init to a value</li>
+</ul>
+</li>
+<li>const
+<ul>
+<li>declares a block-scoped, read-only variable</li>
+<li>does not prevent mutations</li>
+</ul>
+</li>
+<li>destructuring
+<ul>
+<li>unpack values</li>
+</ul>
+</li>
+</ul>
+<h2 id="scopes">scopes:</h2>
+<ul>
+<li>global scope - default scope for all code in script mode</li>
+<li>module scope - scope for code in module mode</li>
+<li>function scope - scope within a function</li>
+<li>block scope - scope created within a block {} (let and const belong here)</li>
+</ul>
+<h2 id="hoisting">hoisting:</h2>
+<ul>
+<li>var declared variables are hoisted (only declaration)</li>
+<li>can refer to variable anywhere in its scope</li>
+<li>var sttements should be placed as near to the top of function - increase clarity</li>
+<li>functions hoisted both declaration and value</li>
+</ul>
+<h2 id="global-variables">global variables</h2>
+<ul>
+<li>web pages -&gt; window, window.variable</li>
+<li>globalThis (in all environments)</li>
+</ul>
+<h2 id="data-types">data types:</h2>
+<ul>
+<li>boolean</li>
+<li>null</li>
+<li>undefined</li>
+<li>number (integer or float)</li>
+<li>BigInt</li>
+<li>string</li>
+<li>symbol</li>
+<li>object</li>
+</ul>
+<p>When casting, you don't need to declare it as JavaScript is dynamically typed.</p>
+<p>Converts numeric values to strings when using + but else converts strings to numbers</p>
+<ul>
+<li>parseInt() for string to integer
+<ul>
+<li>radix parameter for number system</li>
+<li>parseInt(&quot;101&quot;, 2); returns 5</li>
+</ul>
+</li>
+<li>parseFloat() for string to float</li>
+<li>Number() or + (unary plus)</li>
+</ul>
+<h2 id="literals">literals</h2>
+<ul>
+<li>Array Literals
+<ul>
+<li>list of zero+ expressions enclosed in []</li>
+<li>can have empty slots by placing two commas in a row
+<ul>
+<li>returns undefined when accessed with index</li>
+<li>ignored when end of list</li>
+<li>should add undefined though for clarity</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Boolean Literals
+<ul>
+<li>true or false</li>
+</ul>
+</li>
+<li>Numeric literals
+<ul>
+<li>Interger literals in different bases &amp; floating point literals in base 10</li>
+<li>Integer literals:
+<ul>
+<li>Written in decimal, hexadecimal, octal or binary</li>
+<li>leading 0 or 0o indicates octal</li>
+<li>leading 0x indicates hexadecimal</li>
+<li>leading 0b indicates binary</li>
+<li>trailing n suffix indicates BigInt</li>
+</ul>
+</li>
+<li>Floating-point literals
+<ul>
+<li>An unsigned decimal integer</li>
+<li>Decimal point</li>
+<li>A fraction</li>
+<li>An exponent - e followed by an integer</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Object literals
+<ul>
+<li>List of property names and associated values of an object, enclosed with {}</li>
+<li>Kind of like Python's dictionary</li>
+<li>Can be nested</li>
+<li>Unusual property names must be accessed with [] instead of .</li>
+<li>Supports various shorthand syntaxes for prototyping, methods, super calls, etc.</li>
+</ul>
+</li>
+<li>RegExp
+<ul>
+<li>encased in //</li>
+</ul>
+</li>
+<li>String literals
+<ul>
+<li>Inclosed in &quot; or '</li>
+<li>can call any method's of the String object on a string literal</li>
+<li>Template literal with `
+<ul>
+<li>can have literal string creation e.g. '\n'</li>
+<li>Multiline</li>
+<li>String interpolation (Python's string formatting) with ${}</li>
+</ul>
+</li>
+<li>Tagged templates with a call to a tag function for parsing it
+<ul>
+<li>e.g. print``</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 </body>
 </html>
